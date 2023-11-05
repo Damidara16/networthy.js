@@ -21,7 +21,7 @@ function CreditCardForm({ setNetWorth }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/submit-credit-card', {
+            const response = await fetch(process.env.HOST + '/submit-credit-card', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
