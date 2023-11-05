@@ -3,7 +3,7 @@ import CreditCardForm from './CreditCardForm';
 
 function App() {
   const [netWorth, setNetWorth] = useState(0);
-
+  console.log(process.env)
   return (
     <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
       <h1>Check Your Net Worth</h1>
