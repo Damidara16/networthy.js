@@ -24,15 +24,13 @@ function CreditCardForm({ setNetWorth }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(HOST + '/submit-credit-card', {
+            const response = await fetch(HOST + 'submit-credit-card', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(cardData),
             });
-            response.header('Access-Control-Allow-Origin', '*');
-            response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 
             const data = await response.json();
             setErrors(data.errors);
