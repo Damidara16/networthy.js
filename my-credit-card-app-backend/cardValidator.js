@@ -1,3 +1,4 @@
+// https://www.30secondsofcode.org/js/s/luhn-check/ source for luhnCheck
 const luhnCheck = num => {
     const arr = (num + '')
         .split('')
