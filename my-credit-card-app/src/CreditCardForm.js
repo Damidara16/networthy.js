@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './index.css';
 
+const HOST = 'https://networthy-server.vercel.app/';
+
+
 function CreditCardForm({ setNetWorth }) {
     const [cardData, setCardData] = useState({
         cardNumber: '',
@@ -21,7 +24,7 @@ function CreditCardForm({ setNetWorth }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(process.env.HOST + '/submit-credit-card', {
+            const response = await fetch(HOST + '/submit-credit-card', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
