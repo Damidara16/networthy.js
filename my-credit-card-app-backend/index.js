@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const validateCard = require('./cardValidator');
 
 function getRandomNumber(min, max) {
@@ -8,6 +9,7 @@ function getRandomNumber(min, max) {
 
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/submit-credit-card', (req, res) => {

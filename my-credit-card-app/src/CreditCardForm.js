@@ -31,6 +31,9 @@ function CreditCardForm({ setNetWorth }) {
                 },
                 body: JSON.stringify(cardData),
             });
+            response.header('Access-Control-Allow-Origin', '*');
+            response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+
             const data = await response.json();
             setErrors(data.errors);
             setErrorFields(data.errorFields);
